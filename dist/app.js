@@ -62,8 +62,8 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render("error");
 });
-const PORT = process.env.PORT || 5500;
-const DBURI = process.env.DBURI;
+const PORT = process.env.PORT || 8080;
+const DBURI = process.env.DATABASE_URL;
 mongoose_1.default
     .connect(DBURI)
     .then(() => console.log("database connected"))

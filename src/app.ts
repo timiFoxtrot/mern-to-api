@@ -49,8 +49,8 @@ app.use(function (
   res.render("error");
 });
 
-const PORT = process.env.PORT || 5500;
-const DBURI: string = process.env.DBURI as string;
+const PORT = process.env.PORT || 8080;
+const DBURI: string = process.env.DATABASE_URL as string;
 
 mongoose
   .connect(DBURI)

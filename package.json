@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./dist/app",
-    "build": "tsc -w"
+    "compile": "tsc -w",
+    "build": "node ./dist/app"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
