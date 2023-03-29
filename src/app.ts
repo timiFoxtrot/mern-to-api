@@ -25,6 +25,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+
+app.get("/", (req, res, next) => {
+  res.send("Welcome to the api")
+})
 app.use("/api/v1", todoItemsRouter);
 app.use("/users", usersRouter);
 
