@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./dist/app",
-    "compile": "tsc -w",
-    "build": "node ./dist/app"
+    "dev": "nodemon ./dist/app",
+    "build": "tsc",
+    "start": "node ./dist/app"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
