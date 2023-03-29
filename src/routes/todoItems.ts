@@ -21,7 +21,7 @@ router.post("/item", async (req: Request, res: Response) => {
 
 router.get("/items", async (req: Request, res: Response) => {
   try {
-    const items = await Item.find({});
+    const items = await Item.find({}).sort({ createdAt: -1 });
     res.status(200).json({
       data: items.length,
       status: "success",
